@@ -1,0 +1,24 @@
+{
+    "resourceType": "StructureDefinition",
+    "url": "http://hl7.nl/fhir/fhir-ig-sandbox-stu3/StructureDefinition/Patient",
+    "name": "Patient",
+    "title": "Patient",
+    "status": "draft",
+    "description": "Patient",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Patient",
+    "baseDefinition" : "http://fhir.nl/fhir/StructureDefinition/nl-core-patient",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Patient.identifier:BSN",
+                "path": "Patient.identifier",
+                "sliceName": "BSN",
+                "min": 1,
+                "mustSupport": true
+            }
+        ]
+    }
+}
