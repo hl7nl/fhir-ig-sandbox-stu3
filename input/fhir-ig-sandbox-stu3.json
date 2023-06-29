@@ -1,0 +1,84 @@
+{
+    "resourceType": "ImplementationGuide",
+    "id": "hl7.fhir.nl.fhir-ig-sandbox-stu3",
+    "url": "http://hl7.nl/fhir/fhir-ig-sandbox-stu3/ImplementationGuide/fhir-ig-sandbox-stu3",
+    "version": "0.1.0",
+    "name": "fhir-ig-sandbox-stu3",
+    "title": "FHIR IG Sandbox STU3 Implementation Guide",
+    "status": "draft",
+    "experimental": false,
+    "publisher": "HL7NL NUTS",
+    "contact" : [ {
+      "name" : "HL7NL",
+      "telecom" : [ {
+        "system" : "url",
+        "value" : "https://www.hl7.nl"
+      } ]      
+    },{
+        "name" : "NUTS",
+        "telecom" : [ {
+          "system" : "url",
+          "value" : "https://www.nuts.nl"
+        } ]      
+      } ],
+    "description": "A brief description of what MyIG is about (probably the same text as in your readme)",
+    "jurisdiction" : [{
+      "coding" : [{
+        "system" : "urn:iso:std:iso:3166",
+        "code" : "NL"
+      }]
+    }],
+    "packageId": "hl7.fhir.nl.fhir-ig-sandbox-stu3",
+    "fhirVersion": [ "3.0.2" ],
+    "dependsOn": [
+      {
+        "uri": "https://simplifier.net/packages/hl7.terminology.r3/4.0.0",
+        "packageId": "hl7.terminology.r3",
+        "version": "4.0.0"
+      },
+      {
+        "uri": "https://simplifier.net/packages/nictiz.fhir.nl.stu3.zib2017/2.2.13",
+        "packageId": "nictiz.fhir.nl.stu3.zib2017",
+        "version": "2.2.13"
+      }
+    ],
+    "definition": {
+      "resource": [
+      ],
+      "page": {
+        "nameUrl": "index.html",
+        "generation": "markdown",
+        "title": "Home Page",
+        "page": [
+          {
+            "nameUrl": "downloads.html",
+            "generation": "markdown",
+            "title": "Downloads"
+          },
+          {
+            "nameUrl": "copyrights.html",
+            "generation": "markdown",
+            "title": "Copyrights"
+          }
+        ]
+      },
+      "parameter": [
+        {
+          "code" : "releaselabel",
+          "value": "CI build"
+        },
+        {
+          "code" : "copyrightyear",
+          "value": "2023"
+        },
+        {
+          "code" : "excludettl",
+          "value" : "true"
+        },
+        {
+          "code" : "display-warnings",
+          "value" : "true"
+        }
+      ]
+    }
+  }
