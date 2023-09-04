@@ -1,0 +1,28 @@
+@startuml
+start
+:Select patient in XIS
+
+(if needed, launch extension or 
+application supporting FHIR / NUTS);
+note right
+  e.g. a practitioner in EPIC + HINQ
+  or a nurse in Zorg bij jou-app
+end note
+
+:Select Service request for patient;
+:Update Service request status 
+(e.g. 'completed', 'revoked'), 
+Plan definition, etc.;
+#Gray:Notify performer-organisation of service request update;
+#Gray:Set autorization performer-organisation for patient data(?);
+#RoyalBlue:<color:white>Get service request;
+if (approved?) is (yes) then
+#RoyalBlue:<color:white>Update/approve Service request status at requester-organisation 
+<color:white>(check on availability personnel before approving);
+#RoyalBlue:<color:white>Update CarePlan for patient;
+#RoyalBlue:<color:white>Set autorization requester-organisation for patient data (?);
+stop
+else (no)
+#RoyalBlue:<color:white>Alert?;
+stop
+@enduml

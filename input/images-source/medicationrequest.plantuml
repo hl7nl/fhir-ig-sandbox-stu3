@@ -1,0 +1,18 @@
+@startuml
+start
+:Select patient in XIS
+
+(if needed, launch extension or 
+application supporting FHIR / NUTS);
+note right
+  e.g. a nurse in Zorg bij jou-app
+end note
+
+:Create new medication request for patient;
+:Select medication, performer, etc;
+#Gray:Notify performer-organization of appointment;
+#SkyBlue:Put (proposed) medication request on inbasket of performer;
+#SkyBlue:follow-up on inbasket (task) by performer;
+#RoyalBlue:<color:white>update medication request at requester-organization;
+stop
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+start
+:Select patient in XIS
+
+(if needed, launch extension or 
+application supporting FHIR / NUTS);
+note right
+  e.g. a practitioner in EPIC + HINQ
+end note
+
+:Create new Service request for patient;
+:Select service-type ('home monitoring') and/or performer-organisation;
+:Select PlanDefinition;
+#Gray:Notify performer-organisation of service request;
+#RoyalBlue:<color:white>Get service request;
+#RoyalBlue:<color:white>Update/approve Service request status at requester-organisation 
+<color:white>(check on availability personnel before approving);
+#RoyalBlue:<color:white>Create CarePlan for patient (on-boarding);
+#RoyalBlue:<color:white>Autorize requester-organisation for patient data;
+#Gray:Autorize performer-organisation for patient data;
+stop
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+start
+:Select patient in XIS
+
+(if needed, launch extension or 
+application supporting FHIR / NUTS);
+note right
+  e.g. a nurse in Zorg bij jou-app
+end note
+
+:Create new appointment proposal for patient;
+:Select service-type and/or participants(performer-organization), appointment-type, etc;
+#Gray:Notify performer-organization of appointment;
+#SkyBlue:Put (proposed) appointment on inbasket of performer-organization;
+#SkyBlue:follow-up on inbasket (task) by performer-organization;
+#RoyalBlue:<color:white>update appointment at requester-organisation;
+stop
+@enduml
